@@ -1,0 +1,39 @@
+﻿<Window x:Class="Рылеев_ПР9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Рылеев_ПР9"
+        mc:Ignorable="d"
+        Title="Практическая работа №9. Программирование циклических алгоритмов."
+        Height="666" Width="600" Background="#8981A9">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.9*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="1"
+               Name="frmMain"
+               NavigationUIVisibility="Hidden">
+
+        </Frame>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="0" Margin="0,5,0,0" >
+            <TextBlock Text="Практическая работа №9" Style="{StaticResource txtTitle}"/>
+            <TextBlock Text="Выполнил студент группы ИСП.20А" Style="{StaticResource txtTitle}"/>
+            <TextBlock Text="Рылеев Александр" Style="{StaticResource txtTitle}"/>
+            <TextBlock Text="Вариант №18" Style="{StaticResource txtTitle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Right">
+            <TextBlock Text="   Введите начало (x₀) и конец (xₖ)" Margin="25,50,40,0"
+                       Style="{StaticResource text}"/>
+            <TextBlock Text="интервала.  Задайте шаг (dₓ) и" Margin="25,0,40,0"
+                       Style="{StaticResource text}"/>
+            <TextBlock Text="константу (b).  Вычисления прово-" Margin="25,0,40,0"
+                       Style="{StaticResource text}"/>
+            <TextBlock Text="дятся по функции:" Margin="25,0,40,0"
+                       Style="{StaticResource text}"/>
+            <Image  Height="60" Source="/Рылеев ПР9;component/Sources/formula.png" Margin="0,-10,30,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

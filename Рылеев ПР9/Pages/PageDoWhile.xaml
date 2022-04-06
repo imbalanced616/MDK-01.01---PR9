@@ -1,0 +1,69 @@
+﻿<Page x:Class="Рылеев_ПР9.Pages.PageDoWhile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Рылеев_ПР9.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="600"
+      Title="PageDoWhile" Background="Wheat">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Расчёт по циклу DoWhile"
+                       FontSize="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Left">
+                <TextBlock Text="x₀ =" Style="{StaticResource txtStyle}"/>
+                <TextBox Name="txtX0" Style="{StaticResource txtBStyle}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Left">
+                <TextBlock Text="xₖ =" Style="{StaticResource txtStyle}"/>
+                <TextBox Name="txtXK" Style="{StaticResource txtBStyle}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Left">
+                <TextBlock Text="dₓ =" Style="{StaticResource txtStyle}"/>
+                <TextBox Name="txtDX" Style="{StaticResource txtBStyle}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Left">
+                <TextBlock Text="b =" Style="{StaticResource txtStyle}"/>
+                <TextBox Name="txtB" Style="{StaticResource txtBStyle}"/>
+            </StackPanel>
+        </StackPanel>
+        <ListBox Grid.Row="2" 
+                 x:Name="lstTable"
+                 FontSize="18"
+                 Width="550" Margin="15"/>
+        <DockPanel Grid.Row="3"
+                   HorizontalAlignment="Center">
+            <Button  Content="◀ Назад"
+                     Name="btnBack"
+                     Click="btnBack_Click"
+                     Style="{StaticResource btnStyle}"/>
+            <Button  Content="Вычислить"
+                     Name="btnCalculate"
+                     Click="btnCalculate_Click"
+                     Style="{StaticResource btnStyle}"/>
+            <Button  Content="Вперёд ▶"
+                     Name="btnNext"
+                     Click="btnNext_Click"
+                     Style="{StaticResource btnStyle}"/>
+        </DockPanel>
+    </Grid>
+</Page>
